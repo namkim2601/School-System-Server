@@ -1,0 +1,17 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">Add New Staff Member</h1>
+         <form class="pure-form pure-form-stacked login" method="POST" action="{{ url_for('add_staff') }}">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password-check" placeholder="Re-enter Password" required>
+            <input type="text" name="department" placeholder="Department" required>
+            <input type="text" name="address" placeholder="Address">
+            <input type="text" name="salary" placeholder="Salary">
+            <input class="pure-button pure-button-primary" type="submit" value ="Add">
+        </form>
+    </div>
+</div>
+</body>
+</html>

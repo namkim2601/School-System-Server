@@ -1,0 +1,21 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">Number of Staff per Department</h1>
+        <table class="pure-table">
+            <thead>
+                <tr><th>Department</th><th>Number of Staff</th></tr>
+            </thead>
+            <tbody>
+                {% for s in staff %}
+                    <tr>
+						<td> {{s[0]}}</td>
+                        <td> {{s[1]}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

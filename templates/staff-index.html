@@ -1,0 +1,21 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">Staff Index</h1>
+            <form action="{{ url_for('list_staff') }}">
+                <input type="submit" value="Staff List" />
+            </form>
+            <br>
+            <form action="{{ url_for('search_staff') }}">
+                <input type="submit" value="Staff Search" />
+            </form>
+            <br>
+            <form action="{{ url_for('report_staff') }}">
+                <input type="submit" value="Staff Report" />
+            </form>
+            <br>
+            <form action="{{ url_for('add_staff') }}">
+                <input type="submit" value="Add Staff" />
+            </form>
+     </div>
+</div>

@@ -1,0 +1,27 @@
+{% include 'top.html' %}
+<div style="float: left; width: 40%; padding-left: 54px; text-align: left;" >
+    </br>
+    {% for p in posts %}
+        <span style="color: #ff0000">{{p[1]}}</span><br />
+        {{p[2]}}<br />
+        <div style="text-align: right"; >
+            <span style="color: #0000ff">{{p[3]}}</span></div>
+        {% if session.name == p[1] %}
+            <form action="/delete-post" method="post">
+                <input name="postid" type="hidden" value="{{p[0]}}"/>
+                <input value="Delete" type="submit" />
+            </form>
+        {% endif %}
+        <hr />
+    {% endfor %}
+</div>
+<body>
+    <div style="margin-left: 50%; width: 50%; height: 591px;">
+        </br>
+        <form action="/discussion" method="post">
+            <input name="username" type="hidden" value="{{ session.name }}"/>
+            <textarea name="content" rows="4" cols="50"></textarea>
+            <input value="New post" type="submit"/>
+        </form>
+    </div>
+</body>
